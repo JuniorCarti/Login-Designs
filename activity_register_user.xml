@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color_8"
+    tools:context=".activities.RegisterUserActivity">
+
+    <!--Toolbar-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/colorWhite"
+        android:background="@drawable/shape_rec01"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@null"
+            android:src="@drawable/ic_back_black" />
+
+        <TextView
+            android:id="@+id/registerUserTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Register User"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/registerUserTv"
+            android:padding="1dp"
+            android:src="@drawable/ah" />
+
+        <ImageButton
+            android:id="@+id/gpsBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:src="@drawable/ic_gps_black" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iconIv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_circle01"
+        android:padding="5dp"
+        android:src="@drawable/ic_key_white" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profileIv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/iconIv"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_person_black"
+        app:civ_border_color="@color/theme_color_8"
+        app:civ_border_width="1dp" />
+
+
+    <EditText
+        android:id="@+id/emailEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addressEt"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/input_bg"
+        android:drawableStart="@drawable/ic_baseline_email_24"
+        android:drawablePadding="5dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textColor="@color/primary"
+        android:textColorHighlight="#000000"
+        android:textColorHint="@color/primary" />
+
+    <EditText
+        android:id="@+id/nameEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileIv"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/input_bg"
+        android:drawableStart="@drawable/ic_person_black"
+        android:drawablePadding="5dp"
+        android:hint="Full Name"
+        android:inputType="textPersonName|textCapWords"
+        android:padding="10dp"
+        android:textColor="@color/primary"
+        android:textColorHighlight="#000000"
+        android:textColorHint="@color/primary" />
+
+    <EditText
+        android:id="@+id/phoneEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameEt"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/input_bg"
+        android:drawableStart="@drawable/ic_phone_black"
+        android:drawablePadding="5dp"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:textColor="@color/primary"
+        android:textColorHighlight="#000000"
+        android:textColorHint="@color/primary" />
+
+    <LinearLayout
+        android:id="@+id/addressLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneEt"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/countryEt"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/primary"
+            android:textColorHint="@color/primary"
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_location_black"
+            android:drawablePadding="5dp"
+            android:hint="Country"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColorHighlight="#000000"
+            android:inputType="textPostalAddress"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/stateEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:textColor="@color/primary"
+            android:textColorHint="@color/primary"
+            android:layout_weight="1"
+            android:background="@drawable/input_bg"
+            android:drawableStart="@drawable/ic_location_black"
+            android:drawablePadding="5dp"
+            android:hint="State"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textColorHighlight="#000000"
+            android:inputType="textPostalAddress"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/cityEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/input_bg"
+            android:textColor="@color/primary"
+            android:textColorHint="@color/primary"
+            android:drawableStart="@drawable/ic_location_black"
+            android:drawablePadding="5dp"
+            android:hint="City"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:inputType="textPostalAddress"
+            android:padding="10dp"
+            android:textColorHighlight="#000000"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/addressEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addressLl"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/input_bg"
+        android:drawableStart="@drawable/ic_location_black"
+        android:drawablePadding="5dp"
+        android:hint="Complete Address"
+        android:inputType="textPostalAddress|textMultiLine"
+        android:padding="10dp"
+        android:textColor="@color/primary"
+        android:textColorHighlight="#000000"
+        android:textColorHint="@color/primary" />
+
+    <EditText
+        android:id="@+id/passwordEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEt"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/input_bg"
+        android:drawableStart="@drawable/ic_password_black"
+        android:drawablePadding="5dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/primary"
+        android:textColorHighlight="#000000"
+        android:textColorHint="@color/primary" />
+
+    <EditText
+        android:id="@+id/cPasswordEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordEt"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/input_bg"
+        android:drawableStart="@drawable/ic_password_black"
+        android:drawablePadding="5dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/primary"
+        android:textColorHighlight="#000000"
+        android:textColorHint="@color/primary" />
+
+    <!--Rounded Button-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cPasswordEt"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/primary"
+        android:text="Register"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:background="@drawable/round_back_theme_1000"
+        android:textColor="@color/colorWhite"
+        android:textSize="12dp"
+        android:padding="8dp"
+        android:fontFamily="@font/aclonica"
+        app:cornerRadius="20dp" />
+
+
+
+
+</RelativeLayout>
